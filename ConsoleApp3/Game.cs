@@ -29,10 +29,16 @@
                             "\n1.GuessingGame" +
                             "\n2.HangmanGame");
             var userChoice = Console.ReadLine();
+            Console.Clear();
             if (userChoice.Contains('1') || userChoice == "GuessingGame")
                 new GuessingGame().PlayGame();
             else if (userChoice.Contains('2') || userChoice == "HangmanGame")
                 new HangmanGame().PlayGame();
+            else
+            {
+                Console.WriteLine("Enter the number or the name of the game");
+                ChooseTheGame();
+            }
         }
     }
 }
